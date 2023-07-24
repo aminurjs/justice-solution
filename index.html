@@ -7,7 +7,7 @@
     <!-- Google font cdn  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@800&family=Poppins&display=swap" rel="stylesheet">
     <!-- Font awesome cdn  -->
     <script src="https://kit.fontawesome.com/e45d5c607f.js" crossorigin="anonymous"></script>
     <!-- Tailwind css and DaisyUI cdn  -->
@@ -18,7 +18,8 @@
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                'button-prime': '#B68C5A',
+                'button-hover': '#8b693e',
               }
             }
           }
@@ -28,11 +29,54 @@
         body{
             font-family: 'Poppins', sans-serif;
         }
+        .garamond{
+            font-family: 'EB Garamond', serif;
+        }
     </style>
 </head>
 <body>
-    <header>
-
+    <header class="container max-w-7xl mx-auto">
+        <div class="navbar bg-base-100 py-8">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">Services<i class="fa-solid fa-angle-right"></i></a></li>
+                  <li><a href="">Cases<i class="fa-solid fa-angle-right"></i></a></li>
+                  <li><a href="">Blog<i class="fa-solid fa-angle-right"></i></a></li>
+                  <li><a href="">Contact us<i class="fa-solid fa-angle-right"></i></a></li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost normal-case text-xl"><img src="./images/logo2.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a href="">Home</a></li>
+                <li><a href="">Services<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="">Cases<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="">Blog<i class="fa-solid fa-angle-right"></i></a></li>
+                <li><a href="">Contact us<i class="fa-solid fa-angle-right"></i></a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn bg-button-prime hover:bg-button-hover text-white text-lg font-extrabold capitalize">Free Consultation</a>
+            </div>
+        </div>
+        <div class="banner bg-[url('./images/banner.png')] bg-no-repeat bg-cover bg-center rounded-xl">
+            <div class="py-24 bg-gradient-to-t from-[#111] to-transparent rounded-xl">
+                <div class="max-w-2xl mx-auto">
+                    <h1 class="garamond text-5xl md:text-7xl text-white text-center mb-6 ">We Provide Effective Legal Solutions</h1>
+                    <p class="text-base text-center text-[#e7e7e7] my-8">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <div class=" text-center">
+                        <input class="w-[65%] md:w-[74%] mr-6 py-3 px-5 rounded-xl outline-none mb-5" type="text" name="search" id="search" placeholder="Search your services">
+                        <input class="btn bg-button-prime hover:bg-button-hover text-white text-lg font-extrabold capitalize border-none px-10" type="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
 
